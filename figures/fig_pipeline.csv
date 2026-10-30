@@ -1,0 +1,37 @@
+box,name,id,label,used_by_final_model,upstream
+Preparation,p1_audit,P1,corpus audit,yes,
+Preparation,p2_split,P2,"train, validation, test split",yes,p1_audit
+Preparation,p25_train,P2.5,"training table, statistics",yes,p2_split
+Preparation,p3_sampling,P3,sampling tables,yes,p25_train
+Features and baselines,p4_features,P4,item feature matrices,yes,p3_sampling
+Features and baselines,p5_eval_baseline,P5,"evaluation harness, popularity",yes,p4_features
+Features and baselines,p6_als,P6,ALS baseline,yes,p5_eval_baseline
+Features and baselines,p7_graph,P7,item-item relational graph,no,p1_audit
+Features and baselines,p8_fusion_features,P8,extra fusion features,no,p4_features
+Features and baselines,p9_cooccurrence,P9,item co-occurrence,no,p25_train
+Features and baselines,p9b_colisten,P9b,exact co-listening neighbours,yes,p25_train p6_als
+Features and baselines,p10_profiles,P10,user profile vectors,no,p25_train p4_features
+Features and baselines,als_phase_d,ALS-D,ALS phase D tuning,yes,p6_als
+Features and baselines,itemknn_select,KNN,ItemKNN baseline,yes,p6_als p9b_colisten
+Training pairs and model fits,p11_fusion_pairs,P11,training pairs,yes,p2_split p3_sampling p6_als
+Training pairs and model fits,p12_pair_features,P12,concept features of the pairs,yes,p11_fusion_pairs p25_train p3_sampling p4_features p6_als p9b_colisten
+Training pairs and model fits,p13a_fit,P13a,audit and base GAM fit,yes,p11_fusion_pairs p12_pair_features p25_train p2_split p3_sampling p4_features p6_als p9b_colisten
+Training pairs and model fits,p13b_arms,P13b,experiment arms,yes,p11_fusion_pairs p12_pair_features p13a_fit p25_train p2_split p3_sampling p4_features p6_als p9b_colisten
+Training pairs and model fits,p11b_more_pairs,P11b,more negatives,yes,p11_fusion_pairs p2_split p3_sampling p6_als
+Training pairs and model fits,p12b_more_features,P12b,their concept features,yes,p11_fusion_pairs p11b_more_pairs p12_pair_features p25_train p3_sampling p4_features p6_als p9b_colisten
+Training pairs and model fits,p13b2_loss,P13b2,"loss form, negatives",yes,p11_fusion_pairs p11b_more_pairs p12_pair_features p12b_more_features p13a_fit p13b_arms p25_train p2_split p3_sampling p4_features p6_als p9b_colisten
+Training pairs and model fits,gam_knn_slices,Diag,GAM against ItemKNN slices,yes,itemknn_select p13b2_loss p6_als p9b_colisten
+Training pairs and model fits,gam_refit,Refit,"GAM refit, 2 × 2 design",yes,gam_knn_slices itemknn_select p13b2_loss
+Stability and the frozen model,p13c_stability,P13c,bootstrap stability,yes,gam_refit
+Stability and the frozen model,p13d_bounds,P13d,bounded content shapes,yes,p13c_stability
+Stability and the frozen model,p13c_final,P13c,stability of the final model,yes,p13d_bounds
+Evaluation,p14_cold_gam,P14,cold-track GAM,yes,p13c_final
+Evaluation,p14_eval,P14,evaluation on the eval listeners,yes,als_phase_d gam_refit itemknn_select p13c_final p14_cold_gam p5_eval_baseline p6_als p9b_colisten
+Evaluation,cold_start_curve,Curve,cold-start curve,yes,p13c_final p14_cold_gam p14_eval p6_als p9b_colisten
+Evaluation,beyond_accuracy,Beyond,"novelty, coverage, diversity",yes,p14_cold_gam p14_eval
+Evaluation,evidence_removal,Removal,evidence removal of the reasons,yes,p14_cold_gam p14_eval
+"Plain scripts and the figures notebook, on the stored outputs",lb_demo.py,lb_demo.py,ListenBrainz demo,yes,
+"Plain scripts and the figures notebook, on the stored outputs",lb_outside.py,lb_outside.py,tracks outside MLHD,yes,
+"Plain scripts and the figures notebook, on the stored outputs",tree_audit.py,tree_audit.py,tree-GAM audit,yes,
+"Plain scripts and the figures notebook, on the stored outputs",figures.py,figures.py,thesis tables,yes,
+"Plain scripts and the figures notebook, on the stored outputs",notebook,notebook,thesis figures,yes,

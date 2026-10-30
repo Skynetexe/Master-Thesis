@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recommendation demo</title>
+  <!--
+The ListenBrainz demo (pipeline/lb_demo.py, module
+docstring, part 2). The code does not generate this page. The demo run
+copies it to parquet/model/demo/index.html in the data folder, next to
+users.js and one folder per listener with demo_data.js
+("window.DEMO = {...};"), so edit this file, not the copy (a changed copy
+stays as index.old.html). A page opened from disk cannot fetch JSON, so it
+reads the data with a script tag.
+index.html?user=<folder> opens one listener. The filters below follow
+lb_demo.apply_filters(), and test_demo_page.py checks the two against each
+other.
+-->
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      margin: 0;
+      background: Canvas;
+      color: CanvasText;
+      font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+    }
+
+    main {
+      max-width: 1520px;
+      margin: 0 auto;
+      padding: 16px 16px 48px;
+    }
+
+    h1 {
+      font-size: 1.6em;
+      margin: 8px 0 4px;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      margin: 28px 0 8px;
+    }
+
+    h3 {
+      font-size: 1.05em;
+      margin: 16px 0 6px;
+    }
+
+    p {
+      margin: 6px 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 6px 0;
+    }
+
+    th,
+    td {
+      text-align: left;
+      vertical-align: top;
+      padding: 6px 8px;
+      border-bottom: 1px solid #999;
+    }
+
+    thead th {
+      border-bottom: 2px solid #999;
+    }
+
+    tbody th {
+      font-weight: normal;
+    }
+
+    .n {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .muted,
+    .details,
+    summary {
+      color: GrayText;
+    }
+
+    .why p {
+      margin: 0 0 4px;
+    }
+
+    .details p {
+      margin: 2px 0;
+      font-size: 0.92em;
+    }
+
+    fieldset {
+      border: 1px solid #999;
+      margin: 12px 0;
+      padding: 8px 12px;
+    }
+
+    fieldset label {
+      display: inline-block;
+      margin: 4px 18px 4px 0;
+    }
+
+    input[type="number"] {
+      width: 4.5em;
+    }
+
+    .scroll {
+      overflow-x: auto;
+    }
+
+    .two {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 24px;
+    }
+
+    .two>div {
+      flex: 1 1 320px;
+      min-width: 0;
+    }
+
+    .g {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      #tracks .genre {
+        display: none;
+      }
+
+      #tracks .g {
+        display: block;
+      }
+    }
+  </style>
+  <script src="users.js"></script>
+</head>
+
+<body>
+  <main id="app">
+    <p>Loading the demo data.</p>
+  </main>
+  <noscript>
+    <p>This page needs JavaScript to read its data file.</p>
+  </noscript>
+  <script>
+    (function () {
+      "use strict";
+      var app = document.getElementById("app");
+      var DOC = null, USERS = [], USER = null, LISTS = [], state = null;
+
+      // Helpers
+
+      function el(tag, attrs, kids) {
+        var e = document.createElement(tag);
+        var k, v;
+        for (k in attrs || {}) {
+          if (!Object.prototype.hasOwnProperty.call(attrs, k)) continue;
+          v = attrs[k];
+          if (v === null || v === undefined || v === false) continue;
+          if (k === "text") e.textContent = String(v);
+          else if (k === "className") e.className = v;
+          else if (k.slice(0, 2) === "on") e.addEventListener(k.slice(2), v);
+          else if (k === "checked" || k === "value") e[k] = v;
+          else e.setAttribute(k, v === true ? "" : String(v));
+        }
+        (kids || []).forEach(function (c) {
+          if (c === null || c === undefined || c === false) return;
+          e.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+        });
+        return e;
+      }
+      function num(n) {
+        return (n === null || n === undefined) ? "n/a"
+          : Number(n).toLocaleString("en-US");
+      }
+      function pct(x, d) {
+        return (x === null || x === undefined) ? "n/a"
+          : (100 * x).toFixed(d === undefined ? 1 : d) + "%";
+      }
+      function param(name) {
+        var q = window.location.search.replace(/^\?/, "").split("&");
+        for (var i = 0; i < q.length; i++) {
+          var kv = q[i].split("=");
+          if (kv[0] && decodeURIComponent(kv[0]) === name)
+            return decodeURIComponent((kv[1] || "").replace(/\+/g, " "));
+        }
+        return null;
+      }
+      function getPath(doc, path) {
+        var x = doc;
+        for (var i = 0; i < path.length; i++) {
+          if (x === null || typeof x !== "object" || !(path[i] in x)) return null;
+          x = x[path[i]];
+        }
+        return x;
+      }
+      function message(text) {
+        app.textContent = "";
+        app.appendChild(el("h1", { text: "Recommendation demo" }));
+        app.appendChild(el("p", { id: "message", text: text }));
+      }
+      function kv(k, v) {
+        return el("tr", {}, [el("th", { scope: "row", text: k }), el("td", { text: v })]);
+      }
+      function th(text, cls) { return el("th", { text: text, className: cls || null }); }
+      function uniqueSorted(xs) {
+        var s = Array.from(new Set(xs.map(String)));
+        s.sort();
+        return s;
+      }
+
+      // The rule of lb_demo.apply_filters(): walk the stored order, keep a
+      // track unless "only new" hides it (known not false: a known artist, or
+      // none credited), one of its artist keys has reached
+      // the artist cap, or its genre has reached the genre cap. A cap of 0 is
+      // off. Stop at the shown count. No score changes.
+      function applyFilters(rows, opt) {
+        var out = [], nArt = new Map(), nGen = new Map();
+        for (var i = 0; i < rows.length; i++) {
+          if (opt.show !== null && out.length >= opt.show) break;
+          var r = rows[i];
+          if (opt.onlyNew && r.known !== false) continue;
+          var arts = uniqueSorted(r.artist_keys || []);
+          if (opt.artistCap && arts.some(function (a) {
+            return (nArt.get(a) || 0) >= opt.artistCap;
+          })) continue;
+          var g = (r.genre === undefined || r.genre === null) ? null : r.genre;
+          if (opt.genreCap && g !== null && (nGen.get(g) || 0) >= opt.genreCap)
+            continue;
+          out.push(r);
+          arts.forEach(function (a) { nArt.set(a, (nArt.get(a) || 0) + 1); });
+          if (g !== null) nGen.set(g, (nGen.get(g) || 0) + 1);
+        }
+        return out;
+      }
+      function options() {
+        return {
+          artistCap: state.artistOn ? state.artistCap : 0,
+          genreCap: state.genreOn ? state.genreCap : 0,
+          onlyNew: state.onlyNew, show: state.show
+        };
+      }
+      window.demoApplyFilters = applyFilters;   // for the tests
+
+      function start() {
+        USERS = Array.isArray(window.DEMO_USERS) ? window.DEMO_USERS : [];
+        if (window.DEMO) { render(); return; }
+        USER = param("user") || USERS[0] || null;
+        if (!USER) {
+          message("No demo data next to this page. Run python3 -m pipeline.lb_demo " +
+            "--user <name> from the repository root, then open " +
+            "parquet/model/demo/index.html in the data folder.");
+          return;
+        }
+        var s = document.createElement("script");
+        s.src = encodeURIComponent(USER) + "/demo_data.js";
+        s.onload = function () {
+          if (window.DEMO) render();
+          else message("The file " + USER + "/demo_data.js holds no demo data.");
+        };
+        s.onerror = function () {
+          message("This page cannot read " + USER + "/demo_data.js. Demo folders " +
+            "next to it: " + (USERS.join(", ") || "none") + ".");
+        };
+        document.head.appendChild(s);
+      }
+
+      function pickDefault() {
+        for (var i = 0; i < LISTS.length; i++) {
+          if ((getPath(DOC, LISTS[i].path) || []).length) return LISTS[i].id;
+        }
+        return LISTS.length ? LISTS[0].id : null;
+      }
+
+      function render() {
+        DOC = window.DEMO;
+        var page = DOC.page || {};
+        LISTS = (DOC.lists || []).filter(function (m) {
+          return Array.isArray(getPath(DOC, m.path || []));
+        });
+        state = {
+          list: null, show: page.show || 25,
+          artistOn: true, artistCap: page.artist_cap || 5,
+          genreOn: true, genreCap: page.genre_cap || 5, onlyNew: false
+        };
+        state.list = pickDefault();
+        var src = DOC.source || {};
+        var who = src.user || src.export || (DOC.seeds ? "seed artists" : "this listener");
+        document.title = "Recommendations for " + who;
+        app.textContent = "";
+        app.appendChild(el("h1", { text: "Recommendations for " + who }));
+        var md = DOC.model || {};
+        var h = DOC.history || {};
+        app.appendChild(el("p", {
+          className: "muted", text:
+            "Lists of the explainable model of the thesis" +
+            (md.final ? " (" + md.final + ")" : "") + " and its baselines, on " +
+            (h.kind || "no history") + ". The model learned from plays of 2005 to " +
+            "2013. Data written " + (DOC.created_utc || "n/a") + "."
+        }));
+        if (USERS.length > 1) app.appendChild(userPicker());
+        app.appendChild(matchSection());
+        app.appendChild(listSection());
+        app.appendChild(historySection());
+        app.appendChild(methodSection());
+        drawList();
+      }
+
+      function userPicker() {
+        var sel = el("select", {
+          id: "user", onchange: function (e) {
+            window.location.search = "?user=" + encodeURIComponent(e.target.value);
+          }
+        });
+        USERS.forEach(function (u) {
+          sel.appendChild(el("option", { value: u, text: u }));
+        });
+        sel.value = USER || USERS[0];
+        return el("p", {}, [el("label", {}, ["Listener: ", sel])]);
+      }
+
+      function matchSection() {
+        var box = el("section", { id: "match" });
+        var m = DOC.match;
+        box.appendChild(el("h2", { text: "Your listens and the catalog" }));
+        if (DOC.seeds && DOC.seeds.length) {
+          box.appendChild(el("p", {
+            text: "Seed artists: " + DOC.seeds.map(function (s) {
+              return (s.name || s.seed) + (s.artist ? "" : " (not found)");
+            }).join(", ") +
+              ". Each gives its most played tracks of the training data as the history."
+          }));
+        }
+        if (!m) {
+          if (!(DOC.seeds && DOC.seeds.length))
+            box.appendChild(el("p", { text: "No listens were given." }));
+        } else {
+          var mk = Object.keys(m.misses || {});
+          mk.sort(function (a, b) { return (m.misses[b] - m.misses[a]) || (a < b ? -1 : 1); });
+          var misses = mk.map(function (k) { return k + " " + num(m.misses[k]); }).join(", ");
+          box.appendChild(el("table", {}, [el("tbody", {}, [
+            kv("Listens read", num(m.listens) + (m.first_listen_utc ?
+              " (" + m.first_listen_utc + " to " + m.last_listen_utc + ")" : "")),
+            kv("Listens matched to the catalog", num(m.matched) + " (" +
+              pct(m.share_of_listens) + " of all listens, " +
+              pct(m.share_of_listens_with_mbid) + " of the listens with an MBID)"),
+            kv("Distinct recordings matched", num(m.recordings_matched) + " of " +
+              num(m.recordings)),
+            kv("Catalog tracks in your history", num(m.items)),
+            kv("Listens not matched", misses)])]));
+          if (DOC.match_artists) box.appendChild(artistTables(DOC.match_artists));
+        }
+        if (!h_items()) {
+          box.appendChild(el("p", {
+            id: "no-history", text:
+              "No matched history: no listen matched the catalog, so the page shows " +
+              "the popularity list of the training data."
+          }));
+        }
+        return box;
+      }
+      function h_items() { return (DOC.history || {}).items || 0; }
+
+      function artistTables(a) {
+        var raw = el("tbody"), hist = el("tbody");
+        (a.raw || []).forEach(function (r) {
+          raw.appendChild(el("tr", {}, [el("td", { text: r.name }),
+          el("td", { className: "n", text: pct(r.share) }),
+          el("td", { className: "n", text: pct(r.history_share) })]));
+        });
+        (a.matched || []).forEach(function (r) {
+          hist.appendChild(el("tr", {}, [el("td", { text: r.name || ("artist " + r.artist) }),
+          el("td", { className: "n", text: pct(r.share) }),
+          el("td", { className: "n", text: pct(r.listen_share) })]));
+        });
+        return el("div", { className: "two" }, [
+          el("div", {}, [el("h3", { text: "Most played artists in your listens" }),
+          el("div", { className: "scroll" }, [el("table", { id: "raw-artists" }, [
+            el("thead", {}, [el("tr", {}, [th("Artist"), th("Share of listens", "n"),
+            th("Share of matched history", "n")])]), raw])]),
+          el("p", {
+            className: "muted", text: num(a.raw_names) + " artist names in " +
+              num(a.listens) + " listens."
+          })]),
+          el("div", {}, [el("h3", { text: "Largest artists in the matched history" }),
+          el("div", { className: "scroll" }, [el("table", { id: "matched-artists" }, [
+            el("thead", {}, [el("tr", {}, [th("Artist"), th("Share of history", "n"),
+            th("Share of listens", "n")])]), hist])]),
+          el("p", {
+            className: "muted", text: "History share: the weight " +
+              "log(1 + plays) of the matched tracks, as the model weighs them."
+          })])]);
+      }
+
+      function listSection() {
+        var box = el("section", { id: "lists" });
+        box.appendChild(el("h2", { text: "Recommendations" }));
+        if (!LISTS.length) {
+          box.appendChild(el("p", { id: "empty", text: "This page has no list." }));
+          return box;
+        }
+        var maxStored = 1;
+        var fs = el("fieldset", { id: "choose" }, [el("legend", { text: "List" })]);
+        LISTS.forEach(function (m) {
+          var n = (getPath(DOC, m.path) || []).length;
+          maxStored = Math.max(maxStored, n);
+          fs.appendChild(el("label", {}, [
+            el("input", {
+              type: "radio", name: "list", value: m.id,
+              checked: m.id === state.list,
+              onchange: function () { state.list = m.id; drawList(); }
+            }),
+            " " + m.label + " (" + num(n) + ")"]));
+        });
+        box.appendChild(fs);
+        var f = el("fieldset", { id: "filters" }, [el("legend", { text: "Filters" })]);
+        f.appendChild(el("label", {}, [check("artistOn"), " At most ",
+        numberBox("artistCap", 1, 500), " tracks per artist"]));
+        f.appendChild(el("label", {}, [check("genreOn"), " At most ",
+        numberBox("genreCap", 1, 500), " tracks per genre"]));
+        f.appendChild(el("label", {}, [check("onlyNew"), " Only artists you do not know"]));
+        f.appendChild(el("label", {}, ["Show ", numberBox("show", 1, Math.max(maxStored, 1)),
+          " tracks"]));
+        f.appendChild(el("p", {
+          className: "muted", text: "The filters pick tracks " +
+            "from the stored list in its order. They never change a score."
+        }));
+        box.appendChild(f);
+        box.appendChild(el("div", { id: "list" }));
+        return box;
+      }
+      function check(key) {
+        return el("input", {
+          type: "checkbox", id: "f-" + key, checked: !!state[key],
+          onchange: function (e) { state[key] = e.target.checked; drawList(); }
+        });
+      }
+      function numberBox(key, min, max) {
+        return el("input", {
+          type: "number", id: "f-" + key, min: min, max: max,
+          step: 1, value: String(state[key]), oninput: function (e) {
+            var v = parseInt(e.target.value, 10);
+            if (isFinite(v) && v >= min) { state[key] = Math.min(v, max); drawList(); }
+          }
+        });
+      }
+
+      function alsoIn(meta, opt) {
+        var out = new Map();
+        LISTS.forEach(function (m) {
+          if (m.id === meta.id) return;
+          applyFilters(getPath(DOC, m.path) || [], opt).forEach(function (r) {
+            if (!out.has(r.key)) out.set(r.key, []);
+            out.get(r.key).push(m.label);
+          });
+        });
+        return out;
+      }
+
+      function drawList() {
+        var box = document.getElementById("list");
+        if (!box) return;
+        box.textContent = "";
+        var meta = LISTS.filter(function (m) { return m.id === state.list; })[0];
+        if (!meta) return;
+        var rows = getPath(DOC, meta.path) || [];
+        var opt = options();
+        var shown = applyFilters(rows, opt);
+        box.appendChild(el("h3", { text: meta.label }));
+        if (meta.note) box.appendChild(el("p", { className: "muted", text: meta.note }));
+        if (!rows.length) {
+          box.appendChild(el("p", { id: "empty", text: "This list is empty." }));
+          return;
+        }
+        if (!shown.length) {
+          var allKnown = opt.onlyNew && rows.every(function (r) { return r.known; });
+          box.appendChild(el("p", {
+            id: "empty", text: allKnown ?
+              "All " + num(rows.length) + " stored tracks of this list are by " +
+              "artists you know, so this filter leaves the list empty." :
+              "No track of this list passes the filters."
+          }));
+          return;
+        }
+        var also = alsoIn(meta, opt);
+        var tb = el("tbody");
+        shown.forEach(function (r, i) { tb.appendChild(trackRow(r, i, also.get(r.key) || [])); });
+        box.appendChild(el("div", { className: "scroll" }, [el("table", { id: "tracks" }, [
+          el("thead", {}, [el("tr", {}, [th("#", "n"), th("Title"), th("Artist"),
+          th("Genre", "genre"), th("Why")])]), tb])]));
+        box.appendChild(el("p", {
+          className: "muted", id: "count", text: "Showing " +
+            shown.length + " of " + rows.length + " stored tracks."
+        }));
+      }
+
+      function trackRow(r, i, also) {
+        var why = el("td", { className: "why" });
+        (r.reasons || []).forEach(function (x) {
+          why.appendChild(el("p", { className: "reason" }, [
+            el("strong", { text: x.label || x.reason }),
+            (x.strength ? " (" + x.strength + ")" : "") + ": " + (x.words || "")]));
+        });
+        if (!(r.reasons || []).length)
+          why.appendChild(el("p", { className: "muted", text: r.no_reason || "No reason." }));
+        var det = el("details", { className: "details" }, [el("summary", { text: "Details" })]);
+        det.appendChild(el("p", {
+          text: "Rank before the filters: " + num(r.rank) +
+            ". " + (r.details || "")
+        }));
+        (r.reasons || []).forEach(function (x) {
+          if (x.details) det.appendChild(el("p", { text: (x.label || x.reason) + ": " + x.details }));
+        });
+        det.appendChild(el("p", {
+          text: r.known === true ? "You know this artist." :
+            r.known === false ? "An artist new to you." :
+              "No credited artist in the catalog, so the page cannot tell."
+        }));
+        if (also.length) det.appendChild(el("p", {
+          text: "Also shown in: " +
+            also.join(", ") + "."
+        }));
+        why.appendChild(det);
+        var title = el("td", {}, [r.title || ("item " + r.item)]);
+        if (r.sub) title.appendChild(el("div", { className: "muted", text: r.sub }));
+        return el("tr", { "data-key": r.key }, [
+          el("td", { className: "n", text: String(i + 1) }), title,
+          el("td", {}, [r.artist || "unknown artist",
+          el("div", { className: "muted g", text: "Genre: " + (r.genre || "none") })]),
+          el("td", { className: "genre", text: r.genre || "none" }), why]);
+      }
+
+      function historySection() {
+        var h = DOC.history || {};
+        var box = el("section", { id: "history" });
+        if (!(h.top_tracks || []).length && !(h.top_artists || []).length) return box;
+        var tracks = el("tbody"), arts = el("tbody");
+        (h.top_tracks || []).forEach(function (r) {
+          tracks.appendChild(el("tr", {}, [el("td", { text: r.title || ("item " + r.item) }),
+          el("td", { text: r.artist || "unknown artist" }),
+          el("td", { className: "n", text: num(r.plays) })]));
+        });
+        (h.top_artists || []).forEach(function (a) {
+          arts.appendChild(el("tr", {}, [el("td", { text: a.name || ("artist " + a.artist) }),
+          el("td", { className: "n", text: pct(a.share) })]));
+        });
+        box.appendChild(el("details", {}, [el("summary", { text: "Your history in the catalog" }),
+        el("div", { className: "two" }, [
+          el("div", {}, [el("h3", { text: "Most played tracks" }), el("table", {}, [
+            el("thead", {}, [el("tr", {}, [th("Title"), th("Artist"), th("Plays", "n")])]),
+            tracks])]),
+          el("div", {}, [el("h3", { text: "Artists by history share" }), el("table", {}, [
+            el("thead", {}, [el("tr", {}, [th("Artist"), th("Share", "n")])]), arts])])])]));
+        return box;
+      }
+
+      function methodSection() {
+        var md = DOC.model || {}, page = DOC.page || {};
+        var ps = [];
+        if (md.terms) ps.push("Model: " + md.final + ", terms " + md.terms.join(", ") +
+          ". The score of a track is the sum of its term values. Candidates: every " +
+          "catalog track outside your history (" + num(md.candidates) + "). Equal " +
+          "scores rank by item id. A reason's value is its term value minus the mean " +
+          "over the candidates. D1 asks for a positive value in at least 95 percent " +
+          "of " + md.replicates + " bootstrap refits and a top-3 place in at least 80 " +
+          "percent. S4 asks for a positive value under all " + md.members +
+          " near-optimal models and a top-3 place in at least " + md.s4_need +
+          " of them.");
+        ps.push("Strength: the percentile rank of a reason among the candidates of " +
+          "its list. Strong from the " + (page.strong || 99) + "th percentile, " +
+          "moderate from the " + (page.moderate || 90) + "th, slight below. The " +
+          "details line holds the numbers, the odds factor of a model reason " +
+          "included.");
+        ps.push("Filters: they walk a stored list (up to " + num(page.stored) +
+          " tracks) in its order and skip a track whose artist or genre has " +
+          "reached its cap, or whose artist you know when that box is ticked. " +
+          "Genre: the track's genre that weighs most in its genre match with " +
+          "your history.");
+        ps.push("Every number on this page is in lb_demo.json and demo_data.js " +
+          "of this listener's folder (pipeline/lb_demo.py, " + (DOC.version || "") + ").");
+        return el("section", { id: "method" }, [el("details", {}, [
+          el("summary", { text: "How this page was made" })].concat(
+            ps.map(function (t) { return el("p", { text: t }); })))]);
+      }
+
+      start();
+    })();
+  </script>
+</body>
+
+</html>

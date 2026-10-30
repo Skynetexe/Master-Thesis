@@ -1,0 +1,9 @@
+rank,item,title,artist,reason,value,odds
+1,2607055,Swamp Song,Tool,artist,10.435813913636395,34057.78478987556
+1,2607055,Swamp Song,Tool,artist_tag_affinity,0.5574721872039914,1.7462527164947312
+1,2607055,Swamp Song,Tool,tag_affinity,0.4890704489489898,1.6307996036928636
+10,6564809,Universally Speaking,Red Hot Chili Peppers,artist,10.001858329069117,22067.436273007854
+10,6564809,Universally Speaking,Red Hot Chili Peppers,artist_tag_affinity,0.5574721872039914,1.7462527164947312
+10,6564809,Universally Speaking,Red Hot Chili Peppers,tag_affinity,0.4890704489489898,1.6307996036928636
+11,642353,Of Wolf and Man,Metallica,artist,9.821864622481069,18432.388163306987
+11,642353,Of Wolf and Man,Metallica,artist_tag_affinity,0.5574721872039914,1.7462527164947312

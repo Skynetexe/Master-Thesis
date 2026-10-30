@@ -1,0 +1,26 @@
+panel,artist,share_pct,in_matched_top15
+raw,Camellia,8.905984519539361,False
+raw,Low Roar,5.583349065508778,True
+raw,Yugo Kanno,3.2471210118935243,False
+raw,Evan Call,2.3787049273173495,False
+raw,Red Hot Chili Peppers,2.2135170851425334,True
+raw,Metallica,2.1049650745705115,True
+raw,Imagine Dragons,1.9208986218614312,False
+raw,Toby Fox,1.8076269586558429,False
+raw,Taylor Swift,1.5952425901453653,False
+raw,Jesper Kyd,1.5102888427411743,False
+matched,Queen,3.2005797175034503,True
+matched,Red Hot Chili Peppers,2.221615757205589,True
+matched,Metallica,2.2203090781341825,True
+matched,The Beatles,2.1296628842663146,True
+matched,Tool,2.015832470302918,True
+matched,Bajaga i Instruktori,1.6762079128004523,True
+matched,Radiohead,1.6682185036209944,True
+matched,C418,1.6198713779789486,True
+matched,Low Roar,1.396130587266375,True
+matched,Gorillaz,1.3817944511686564,True
+matched,Michael Jackson,1.3641356168607894,True
+matched,Ennio Morricone,1.2523212220361348,True
+matched,Ben Prunty,1.2289876671895874,True
+matched,AC/DC,1.1158665932935263,True
+matched,The Rolling Stones,1.1035464763345488,True

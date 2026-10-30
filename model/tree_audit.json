@@ -1,0 +1,1428 @@
+{
+  "bags": [
+    {
+      "bag": 0,
+      "best_loss": 1.9257319053623865,
+      "best_round": 7453,
+      "rounds": 7553,
+      "seconds": 1175.065672636032,
+      "stop": "early",
+      "validation_listeners": 82876
+    },
+    {
+      "bag": 1,
+      "best_loss": 1.9250330951881751,
+      "best_round": 7106,
+      "rounds": 7206,
+      "seconds": 1119.2052443027496,
+      "stop": "early",
+      "validation_listeners": 82876
+    },
+    {
+      "bag": 2,
+      "best_loss": 1.9229207146010507,
+      "best_round": 7426,
+      "rounds": 7526,
+      "seconds": 1162.2349138259888,
+      "stop": "early",
+      "validation_listeners": 82876
+    },
+    {
+      "bag": 3,
+      "best_loss": 1.9311617115678394,
+      "best_round": 7170,
+      "rounds": 7270,
+      "seconds": 1155.870786190033,
+      "stop": "early",
+      "validation_listeners": 82876
+    },
+    {
+      "bag": 4,
+      "best_loss": 1.9231906824489982,
+      "best_round": 7424,
+      "rounds": 7524,
+      "seconds": 1178.5619328022003,
+      "stop": "early",
+      "validation_listeners": 82876
+    }
+  ],
+  "bins": {
+    "artist_affinity": {
+      "edges": 1002,
+      "value_bins": 1003
+    },
+    "artist_tag_affinity": {
+      "edges": 1023,
+      "value_bins": 1024
+    },
+    "audio_fit": {
+      "edges": 1020,
+      "value_bins": 1021
+    },
+    "colisten_same_artist": {
+      "edges": 1009,
+      "value_bins": 1010
+    },
+    "genre_affinity": {
+      "edges": 1022,
+      "value_bins": 1023
+    },
+    "tag_affinity": {
+      "edges": 1022,
+      "value_bins": 1023
+    }
+  },
+  "check": {
+    "bag_losses_again": true,
+    "bins_equal_step_layout": true,
+    "dense": {
+      "listeners": 6,
+      "near_ties": 0
+    },
+    "loss_equals_softmax_block": true,
+    "markers_current": true,
+    "neutral_equals_p13a": true,
+    "offsets_equal_arm_block": true
+  },
+  "declared": "before any code or result",
+  "falls": {
+    "artist_affinity": {
+      "bag_net": [
+        -3.682163569635721,
+        -3.6423448207841727,
+        -3.6512919921719154,
+        -3.6242620620573547,
+        -3.662565610902057
+      ],
+      "falls": true,
+      "final_net": -3.905542500780687,
+      "free_net": -3.9148951459393757,
+      "net": -3.652525611110244,
+      "rises": false
+    },
+    "artist_tag_affinity": {
+      "bag_net": [
+        0.30687652856576875,
+        0.319588793584028,
+        0.30418530136485267,
+        0.29304612560526205,
+        0.31217749368140846
+      ],
+      "falls": false,
+      "final_net": 0.24901934342249993,
+      "free_net": 0.3084696924514077,
+      "net": 0.30717484856026395,
+      "rises": true
+    },
+    "audio_fit": {
+      "bag_net": [
+        0.43411349335383265,
+        0.4234444981534156,
+        0.4177775800867979,
+        0.4114094579515103,
+        0.40789461244272973
+      ],
+      "falls": false,
+      "final_net": 0.39144629400139486,
+      "free_net": 0.43371603047380464,
+      "net": 0.4189279283976572,
+      "rises": true
+    },
+    "colisten_same_artist": {
+      "bag_net": [
+        9.070101222414957,
+        9.023181749595683,
+        9.011910267739447,
+        9.041624558740859,
+        9.044234359172552
+      ],
+      "falls": false,
+      "final_net": 9.23364171095025,
+      "free_net": 9.30306661400445,
+      "net": 9.0382104315327,
+      "rises": true
+    },
+    "genre_affinity": {
+      "bag_net": [
+        0.20964930264449777,
+        0.18992741121940204,
+        0.19386108320638096,
+        0.18770273179052965,
+        0.1696878887588713
+      ],
+      "falls": false,
+      "final_net": 0.08697610403598438,
+      "free_net": 0.187770067547387,
+      "net": 0.1901656835239363,
+      "rises": true
+    },
+    "tag_affinity": {
+      "bag_net": [
+        -0.34400786237882924,
+        -0.33632627318652963,
+        -0.32441710299358884,
+        -0.36112095253679133,
+        -0.33977626499319
+      ],
+      "falls": true,
+      "final_net": 0.0,
+      "free_net": -0.35716036691833575,
+      "net": -0.3411296912177858,
+      "rises": false
+    }
+  },
+  "inputs": {
+    "fusion_features.npz": "c330afedf21123d414d85f6b083ef165ada840732e56b1642e6bf68fbddc1836",
+    "fusion_pairs.npz": "788aa71d87dcf09fa6b31af4e8b960c1e6cf52c63cdf324a224f46b311914e0f",
+    "gam_knn_slices.npz": "9c956ed5a9ef62a962400507f9da9daf54b04daca8dcec1ecaf57674d8afe675",
+    "gam_refit.json": "f9560b5265895019bd350649aef1bd8a76a3cd223ee492a071caa7d6d8fdf4aa",
+    "gam_refit.npz": "a4afe08ca8d904d59d51edcf7c701dd7d2f9dea3a4c2a96e06c79ccf0b1cda39",
+    "itemknn_selection.json": "081d4db08a63a66b1f61642fce2ab843fbfb125a882712cfd29b059ec23310ce",
+    "itemknn_selection_ranks.npz": "983e365caf96c12d6e6c3d4586124361e1bed9ffbb7b30292ecc6acbee19a42e",
+    "marker:gam_refit": "463046d4b88f5808172cbfa9582348c8b7e84a10ca9eb80e08e1cc822d9045fe",
+    "marker:p11b_more_pairs": "99bf1a734a87edd1c9ae81523a6700fe48914edfb692e8523eafdba29f83cee8",
+    "marker:p12b_more_features": "dceeb1e2f4b7c3b925146a36af19da9ac0d6982e6dcf264caef89eaf8af194e7",
+    "marker:p13b2_loss": "409a0df4cf43fbeb86c83acf97f1197ee35c22dcce41ee24e747d7ec22298928",
+    "marker:p13c_final": "736fc03a9ac587da09023c51335e61dea59ab913dcbe261237c859e45183c928",
+    "marker:p13c_stability": "544c8785b4f2d41d2ed22677fcce368a279bc0dbdb6c8e7e56989cc1f7e9c7e5",
+    "marker:p13d_bounds": "a01aa39dcf237d0318c1c3c5a0aba3d04dd53f436d4106178fb1bee57b902748",
+    "marker:p6_als": "4760c5b70b2b3907f0cee52081204c667d744fe6c470ed133ce2595e6aba725d",
+    "marker:p9b_colisten": "fd936ef1dc23c7e9a4a245202c0876f0060ddf1003e2015ad005a3128ebc0e34",
+    "p13a_arrays.npz": "d38ac927299b2d4860a7943b3e1f2599c06d3bc09c0ec844b8c3ba9ff12f04f8",
+    "p13a_model.json": "117e7be80ee4e7aeea944fd601e5a38eded5a704777d678f4cf43a07a9094839",
+    "p13b2_arrays.npz": "b83b9a5cc719786a3d26eedf0833d37d11089645bdc82a82d4ca2a9021420cda",
+    "p13b2_model.json": "b6d1c7fc121d5c5e995036ca796b527fd754c105154d21d5171adf1cda312152",
+    "p13b_model.json": "ec7c197f5525517c944391c5b4f4e857433e96ec564cf651e4d0e17b1f193392",
+    "p13c_arrays.npz": "c08aa50e5abbf55a5176c7eb2719e3d0c4e4eac50ea2fe97294bbb4b163dc0c4",
+    "p13c_bounded_p_pop-B_lambda_arrays.npz": "ad69247c0da46cd3aac2019782c6092a753a4eaa80d91de9ba7b36af1f3196e2",
+    "p13c_bounded_p_pop-B_lambda_model.json": "8eddcfe03fc54e0c1b387ba9ac4a657d09475a0bcbbac601c09958f4ab87331c",
+    "p13c_final.json": "92343b990df1335d0961f29750abce825862a5aa6d0bca94d885241fc9027535",
+    "p13c_model.json": "8fed6a1d429546f58c7e378cdf079ea15451f13a30ff2c1890d982114402b67f",
+    "p13d.json": "427ade7ee8289e31f800a9b62bbe8c2e04af8d5f64632e072ff0d9003c350bd5",
+    "p13d_model_set.npz": "3be40b4d8d1b6a5893e786b24eeae1c8ea2176bbbfd171ab1cedac69111da46d",
+    "reports/p13c_bounded_p_pop-B_lambda_report.md": "7e6642cd23ddbfef5ae709023a67ba5a911562b44af505b09c3218810f48cab5"
+  },
+  "model": {
+    "arm": "p_pop-B",
+    "final": {
+      "changed": true,
+      "fit_name": "bounded|p_pop-B|lambda",
+      "tag": "bounded_p_pop-B_lambda"
+    },
+    "free": "without both",
+    "kept": [
+      "tag_affinity",
+      "artist_tag_affinity",
+      "genre_affinity",
+      "artist_affinity",
+      "colisten_same_artist",
+      "audio_fit"
+    ],
+    "level": 64,
+    "m": 64
+  },
+  "points": {
+    "rows": [
+      {
+        "final": {
+          "diff": 0.18119325615222814,
+          "hi": 0.25099793570201556,
+          "lo": 0.2431648998946982,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.24695360614145323
+        },
+        "free": {
+          "diff": -0.011223135157032993,
+          "hi": 0.45594673132361413,
+          "lo": 0.4235654219235789,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.43936999745071437
+        },
+        "point": "p5",
+        "term": "tag_affinity",
+        "tree": 0.4281468622936814,
+        "tree_bags": [
+          0.4059001317866601,
+          0.4431618999501126
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.004199742097581116,
+          "hi": 0.25099793570201556,
+          "lo": 0.2431648998946982,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.24695360614145323
+        },
+        "free": {
+          "diff": 0.0015801184785790845,
+          "hi": 0.2649537419381445,
+          "lo": 0.23019037050934213,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.24957322976045526
+        },
+        "point": "p25",
+        "term": "tag_affinity",
+        "tree": 0.25115334823903435,
+        "tree_bags": [
+          0.24337229157059842,
+          0.2564749902567204
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.03436587423198134,
+          "hi": 0.25099793570201556,
+          "lo": 0.2431648998946982,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.24695360614145323
+        },
+        "free": {
+          "diff": 0.018494079092381155,
+          "hi": 0.20692589386309962,
+          "lo": 0.175472962430816,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.19409365281709073
+        },
+        "point": "p50",
+        "term": "tag_affinity",
+        "tree": 0.2125877319094719,
+        "tree_bags": [
+          0.20403941887111443,
+          0.21892618874605457
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.14999033872113088,
+          "hi": 0.25099793570201556,
+          "lo": 0.2431648998946982,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.24695360614145323
+        },
+        "free": {
+          "diff": 0.01616259140034454,
+          "hi": 0.10707261666985318,
+          "lo": 0.05389427500568033,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.08080067601997781
+        },
+        "point": "p75",
+        "term": "tag_affinity",
+        "tree": 0.09696326742032235,
+        "tree_bags": [
+          0.09017989405742344,
+          0.10316450916465042
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.15993643506555766,
+          "hi": 0.25099793570201556,
+          "lo": 0.2431648998946982,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.24695360614145323
+        },
+        "free": {
+          "diff": 0.004807540543516967,
+          "hi": 0.10421686408377556,
+          "lo": 0.06054589545671434,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.0822096305323786
+        },
+        "point": "p95",
+        "term": "tag_affinity",
+        "tree": 0.08701717107589557,
+        "tree_bags": [
+          0.08148302879307129,
+          0.09418423821829708
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.0033598467043675084,
+          "hi": -0.5232202616559414,
+          "lo": -0.6722694123535493,
+          "outside_band": false,
+          "separates": false,
+          "value": -0.5964942004176488
+        },
+        "free": {
+          "diff": -0.000442473231942242,
+          "hi": -0.5105436298920848,
+          "lo": -0.6725749330046007,
+          "outside_band": false,
+          "separates": false,
+          "value": -0.592691880481339
+        },
+        "point": "zero",
+        "term": "tag_affinity",
+        "tree": -0.5931343537132813,
+        "tree_bags": [
+          -0.6230743244396684,
+          -0.5575347956558072
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.024378913882984687,
+          "hi": -0.3291425308985965,
+          "lo": -0.33868874139810146,
+          "outside_band": true,
+          "separates": false,
+          "value": -0.33446828029300213
+        },
+        "free": {
+          "diff": -0.002605750639822435,
+          "hi": -0.3516853037659802,
+          "lo": -0.3602473095048079,
+          "outside_band": false,
+          "separates": false,
+          "value": -0.3562414435361644
+        },
+        "point": "missing",
+        "term": "tag_affinity",
+        "tree": -0.3588471941759868,
+        "tree_bags": [
+          -0.36050315852614406,
+          -0.3576274266189522
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.03505467129125056,
+          "hi": 0.13269266903586058,
+          "lo": 0.10770282802693228,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.11803689232384901
+        },
+        "free": {
+          "diff": 0.0013887699851428126,
+          "hi": 0.09805838390596869,
+          "lo": 0.06956498051848772,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.08159345104745563
+        },
+        "point": "p5",
+        "term": "artist_tag_affinity",
+        "tree": 0.08298222103259845,
+        "tree_bags": [
+          0.07216494739912852,
+          0.09694761773739266
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.03977502693729229,
+          "hi": 0.37354089781613786,
+          "lo": 0.3612835128024374,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.36705623574634894
+        },
+        "free": {
+          "diff": -0.012914938664827458,
+          "hi": 0.43565708205274356,
+          "lo": 0.4022502398051924,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.4197462013484687
+        },
+        "point": "p25",
+        "term": "artist_tag_affinity",
+        "tree": 0.4068312626836412,
+        "tree_bags": [
+          0.3996327260574386,
+          0.41333615495054155
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.002581589516458982,
+          "hi": 0.37354089781613786,
+          "lo": 0.3612835128024374,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.36705623574634894
+        },
+        "free": {
+          "diff": -0.004676000510791423,
+          "hi": 0.38636481028107783,
+          "lo": 0.36242562329915873,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.37431382577359934
+        },
+        "point": "p50",
+        "term": "artist_tag_affinity",
+        "tree": 0.3696378252628079,
+        "tree_bags": [
+          0.36151303272032276,
+          0.376119823810658
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.018107079525892522,
+          "hi": 0.37354089781613786,
+          "lo": 0.3612835128024374,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.36705623574634894
+        },
+        "free": {
+          "diff": -0.0057146380428178545,
+          "hi": 0.3753472937023053,
+          "lo": 0.33774941302307143,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.35466379426327427
+        },
+        "point": "p75",
+        "term": "artist_tag_affinity",
+        "tree": 0.3489491562204564,
+        "tree_bags": [
+          0.34244115169020173,
+          0.352943897016033
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.023100833846513458,
+          "hi": 0.37354089781613786,
+          "lo": 0.3612835128024374,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.36705623574634894
+        },
+        "free": {
+          "diff": 9.392609399905272e-05,
+          "hi": 0.4216998312886782,
+          "lo": 0.3578215277464927,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.39006314349886334
+        },
+        "point": "p95",
+        "term": "artist_tag_affinity",
+        "tree": 0.3901570695928624,
+        "tree_bags": [
+          0.37904147596489723,
+          0.3994278014204108
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.019309099344511527,
+          "hi": -1.8780160434046433,
+          "lo": -1.9918633904354894,
+          "outside_band": false,
+          "separates": false,
+          "value": -1.92916676003119
+        },
+        "free": {
+          "diff": -0.004196744366636418,
+          "hi": -1.8521647419695657,
+          "lo": -1.9746014259559763,
+          "outside_band": false,
+          "separates": false,
+          "value": -1.905660916320042
+        },
+        "point": "zero",
+        "term": "artist_tag_affinity",
+        "tree": -1.9098576606866784,
+        "tree_bags": [
+          -1.9301999297983117,
+          -1.8873929394358469
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.010032328812176361,
+          "hi": -0.321955247486893,
+          "lo": -0.34186694323374495,
+          "outside_band": false,
+          "separates": false,
+          "value": -0.33288105382911803
+        },
+        "free": {
+          "diff": 0.007383506502114945,
+          "hi": -0.3194774428117952,
+          "lo": -0.33960819459337427,
+          "outside_band": false,
+          "separates": false,
+          "value": -0.3302322315190566
+        },
+        "point": "missing",
+        "term": "artist_tag_affinity",
+        "tree": -0.3228487250169417,
+        "tree_bags": [
+          -0.32560027872682806,
+          -0.3199424944673412
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.03659055354417265,
+          "hi": 0.21867843710459486,
+          "lo": 0.19298881214397715,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.20319349569964912
+        },
+        "free": {
+          "diff": -0.011171962926755902,
+          "hi": 0.19337294038708994,
+          "lo": 0.16670549583731278,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.17777490508223237
+        },
+        "point": "p5",
+        "term": "genre_affinity",
+        "tree": 0.16660294215547647,
+        "tree_bags": [
+          0.1650088836834514,
+          0.16859824880627935
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.013487586808669155,
+          "hi": 0.24646794461448107,
+          "lo": 0.23201209268221387,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.23951581964473778
+        },
+        "free": {
+          "diff": -0.01846228371846323,
+          "hi": 0.26920443742662037,
+          "lo": 0.22243404060427338,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.24449051655453186
+        },
+        "point": "p25",
+        "term": "genre_affinity",
+        "tree": 0.22602823283606863,
+        "tree_bags": [
+          0.2233526760861295,
+          0.2319350285356059
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.018438033349737454,
+          "hi": 0.24646794461448107,
+          "lo": 0.23201209268221387,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.23951581964473778
+        },
+        "free": {
+          "diff": -0.0065619869254173735,
+          "hi": 0.2464725910388847,
+          "lo": 0.2106611592634775,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.2276397732204177
+        },
+        "point": "p50",
+        "term": "genre_affinity",
+        "tree": 0.22107778629500033,
+        "tree_bags": [
+          0.21662772299569824,
+          0.22605291299195832
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.01023193601146452,
+          "hi": 0.24646794461448107,
+          "lo": 0.23201209268221387,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.23951581964473778
+        },
+        "free": {
+          "diff": 0.0001173843243598982,
+          "hi": 0.2701433748961246,
+          "lo": 0.225598202928983,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.2496303713318424
+        },
+        "point": "p75",
+        "term": "genre_affinity",
+        "tree": 0.2497477556562023,
+        "tree_bags": [
+          0.24237524352333747,
+          0.2568442452684902
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.06659902594377926,
+          "hi": 0.3275714419163152,
+          "lo": 0.26075141598685636,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.2901695997356335
+        },
+        "free": {
+          "diff": -0.008776346950206626,
+          "hi": 0.41624094694312136,
+          "lo": 0.2944516327510227,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.3655449726296194
+        },
+        "point": "p95",
+        "term": "genre_affinity",
+        "tree": 0.35676862567941275,
+        "tree_bags": [
+          0.3368435360810871,
+          0.37538964622005655
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.029280650200342206,
+          "hi": -1.1042838463052254,
+          "lo": -1.154526283954706,
+          "outside_band": true,
+          "separates": false,
+          "value": -1.1307065206827902
+        },
+        "free": {
+          "diff": 0.006253027580571668,
+          "hi": -1.0772822514133966,
+          "lo": -1.1337897046496943,
+          "outside_band": false,
+          "separates": false,
+          "value": -1.1076788980630197
+        },
+        "point": "zero",
+        "term": "genre_affinity",
+        "tree": -1.101425870482448,
+        "tree_bags": [
+          -1.1067860491945185,
+          -1.097410391939467
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.008591357789178189,
+          "hi": 0.29494996395781414,
+          "lo": 0.2832937252100859,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.28882108248999083
+        },
+        "free": {
+          "diff": 0.0004728654683878175,
+          "hi": 0.30301547234160814,
+          "lo": 0.2916642904736992,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.2969395748107812
+        },
+        "point": "missing",
+        "term": "genre_affinity",
+        "tree": 0.297412440279169,
+        "tree_bags": [
+          0.2957915418621875,
+          0.29920973178546284
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.02940527229911294,
+          "hi": 1.2387274106401072,
+          "lo": 1.1931032633426817,
+          "outside_band": true,
+          "separates": false,
+          "value": 1.215593950169405
+        },
+        "free": {
+          "diff": 0.040072709528604866,
+          "hi": 1.227936485203914,
+          "lo": 1.182079402860567,
+          "outside_band": true,
+          "separates": false,
+          "value": 1.2049265129399132
+        },
+        "point": "p5",
+        "term": "artist_affinity",
+        "tree": 1.244999222468518,
+        "tree_bags": [
+          1.2290694662042647,
+          1.26354979366691
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.18138648470796628,
+          "hi": -0.04248478601258373,
+          "lo": -0.11049361854455798,
+          "outside_band": true,
+          "separates": false,
+          "value": -0.07763605164700585
+        },
+        "free": {
+          "diff": 0.19614286172605833,
+          "hi": -0.056807611546214526,
+          "lo": -0.12508813686439882,
+          "outside_band": true,
+          "separates": false,
+          "value": -0.0923924286650979
+        },
+        "point": "p25",
+        "term": "artist_affinity",
+        "tree": 0.10375043306096043,
+        "tree_bags": [
+          0.09497216633721517,
+          0.11054064973088651
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.23831096311347677,
+          "hi": -1.2059068551205216,
+          "lo": -1.2831438814487175,
+          "outside_band": true,
+          "separates": false,
+          "value": -1.247381021064209
+        },
+        "free": {
+          "diff": 0.25255539148017014,
+          "hi": -1.2199058646441148,
+          "lo": -1.2971579412391085,
+          "outside_band": true,
+          "separates": false,
+          "value": -1.2616254494309023
+        },
+        "point": "p50",
+        "term": "artist_affinity",
+        "tree": -1.0090700579507321,
+        "tree_bags": [
+          -1.019688929995578,
+          -0.9914555848503296
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.25495121551310973,
+          "hi": -2.017854652480245,
+          "lo": -2.1112018378738515,
+          "outside_band": true,
+          "separates": false,
+          "value": -2.066798494634463
+        },
+        "free": {
+          "diff": 0.26845217619437056,
+          "hi": -2.0280187011226336,
+          "lo": -2.1214395630163265,
+          "outside_band": true,
+          "separates": false,
+          "value": -2.080299455315724
+        },
+        "point": "p75",
+        "term": "artist_affinity",
+        "tree": -1.8118472791213533,
+        "tree_bags": [
+          -1.8296355356907306,
+          -1.8017015523970912
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.2824221619695564,
+          "hi": -2.6414193405323445,
+          "lo": -2.7365900560798484,
+          "outside_band": true,
+          "separates": false,
+          "value": -2.689948550611282
+        },
+        "free": {
+          "diff": 0.3024422443577368,
+          "hi": -2.6582059344191378,
+          "lo": -2.7521287866801645,
+          "outside_band": true,
+          "separates": false,
+          "value": -2.7099686329994626
+        },
+        "point": "p95",
+        "term": "artist_affinity",
+        "tree": -2.4075263886417257,
+        "tree_bags": [
+          -2.4327306034363514,
+          -2.392780944463379
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.015162578815624439,
+          "hi": -0.04034032008799653,
+          "lo": -0.04662506134043696,
+          "outside_band": true,
+          "separates": false,
+          "value": -0.04362624410251681
+        },
+        "free": {
+          "diff": -0.016674393070556848,
+          "hi": -0.03883547547081321,
+          "lo": -0.04512202446646872,
+          "outside_band": true,
+          "separates": false,
+          "value": -0.0421144298475844
+        },
+        "point": "zero",
+        "term": "artist_affinity",
+        "tree": -0.05878882291814125,
+        "tree_bags": [
+          -0.05961770364619756,
+          -0.05827060400332229
+        ]
+      },
+      {
+        "final": {
+          "diff": -1.8716268153418092e-05,
+          "hi": -4.0765722666982754e-05,
+          "lo": -4.886258292286228e-05,
+          "outside_band": true,
+          "separates": false,
+          "value": -4.4803013743988096e-05
+        },
+        "free": {
+          "diff": -2.0566024108714664e-05,
+          "hi": -3.871974173586812e-05,
+          "lo": -4.702493576232425e-05,
+          "outside_band": true,
+          "separates": false,
+          "value": -4.2953257788691523e-05
+        },
+        "point": "missing",
+        "term": "artist_affinity",
+        "tree": -6.351928189740619e-05,
+        "tree_bags": [
+          -6.546204975310665e-05,
+          -6.233420359658126e-05
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.007942453781973224,
+          "hi": 2.908877757550966,
+          "lo": 2.864638484904001,
+          "outside_band": false,
+          "separates": false,
+          "value": 2.8881764885747105
+        },
+        "free": {
+          "diff": -0.02322454200961177,
+          "hi": 2.9231447432655155,
+          "lo": 2.8797607562795204,
+          "outside_band": false,
+          "separates": false,
+          "value": 2.903458576802349
+        },
+        "point": "p5",
+        "term": "colisten_same_artist",
+        "tree": 2.8802340347927373,
+        "tree_bags": [
+          2.8635324863571907,
+          2.891296571711612
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.12643717895159057,
+          "hi": 5.860902489959928,
+          "lo": 5.787025725645116,
+          "outside_band": true,
+          "separates": false,
+          "value": 5.819468798810139
+        },
+        "free": {
+          "diff": -0.16262220036022956,
+          "hi": 5.89600566261287,
+          "lo": 5.822930844756726,
+          "outside_band": true,
+          "separates": false,
+          "value": 5.855653820218778
+        },
+        "point": "p25",
+        "term": "colisten_same_artist",
+        "tree": 5.693031619858548,
+        "tree_bags": [
+          5.413155383360104,
+          5.8147626665767955
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.2120502851419257,
+          "hi": 7.925967493707032,
+          "lo": 7.845317811221606,
+          "outside_band": true,
+          "separates": false,
+          "value": 7.883584541130356
+        },
+        "free": {
+          "diff": -0.263805326414122,
+          "hi": 7.97682876877715,
+          "lo": 7.8987305458307135,
+          "outside_band": true,
+          "separates": false,
+          "value": 7.935339582402552
+        },
+        "point": "p50",
+        "term": "colisten_same_artist",
+        "tree": 7.67153425598843,
+        "tree_bags": [
+          7.656549659754062,
+          7.688944511998413
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.1959984911167183,
+          "hi": 9.808524168902956,
+          "lo": 9.72598497036552,
+          "outside_band": true,
+          "separates": false,
+          "value": 9.764787957764334
+        },
+        "free": {
+          "diff": -0.2616824396221862,
+          "hi": 9.875754302576018,
+          "lo": 9.792532990704279,
+          "outside_band": true,
+          "separates": false,
+          "value": 9.830471906269802
+        },
+        "point": "p75",
+        "term": "colisten_same_artist",
+        "tree": 9.568789466647615,
+        "tree_bags": [
+          9.537891690100981,
+          9.583835445919078
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.20337373319952512,
+          "hi": 12.196363411191781,
+          "lo": 12.053413063715004,
+          "outside_band": true,
+          "separates": false,
+          "value": 12.121818199524961
+        },
+        "free": {
+          "diff": -0.2880807244813628,
+          "hi": 12.284210726782707,
+          "lo": 12.136961073443754,
+          "outside_band": true,
+          "separates": false,
+          "value": 12.206525190806799
+        },
+        "point": "p95",
+        "term": "colisten_same_artist",
+        "tree": 11.918444466325436,
+        "tree_bags": [
+          11.8921122120569,
+          11.935530930884164
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.009864124774318306,
+          "hi": -0.38933423123950295,
+          "lo": -0.39399635203125494,
+          "outside_band": true,
+          "separates": false,
+          "value": -0.3916645509271719
+        },
+        "free": {
+          "diff": 0.01228684308127903,
+          "hi": -0.39186868845645845,
+          "lo": -0.3963871069462449,
+          "outside_band": true,
+          "separates": false,
+          "value": -0.3940872692341326
+        },
+        "point": "zero",
+        "term": "colisten_same_artist",
+        "tree": -0.3818004261528536,
+        "tree_bags": [
+          -0.38225483065195087,
+          -0.38099156925417876
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.0204292375336399,
+          "hi": -0.7150464056329323,
+          "lo": -0.7719264431912872,
+          "outside_band": false,
+          "separates": false,
+          "value": -0.7475355339718233
+        },
+        "free": {
+          "diff": 0.01367057978693964,
+          "hi": -0.7082788170725849,
+          "lo": -0.7650306899133449,
+          "outside_band": false,
+          "separates": false,
+          "value": -0.740776876225123
+        },
+        "point": "missing",
+        "term": "colisten_same_artist",
+        "tree": -0.7271062964381834,
+        "tree_bags": [
+          -0.7311320456834047,
+          -0.717031521645024
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.025258457009852325,
+          "hi": -0.11821838292560993,
+          "lo": -0.14106254733543142,
+          "outside_band": true,
+          "separates": false,
+          "value": -0.13031510825968148
+        },
+        "free": {
+          "diff": -0.00850434171574388,
+          "hi": -0.13415060408583093,
+          "lo": -0.15774560094794451,
+          "outside_band": false,
+          "separates": false,
+          "value": -0.14706922355378993
+        },
+        "point": "p5",
+        "term": "audio_fit",
+        "tree": -0.1555735652695338,
+        "tree_bags": [
+          -0.16403215648466124,
+          -0.14978317819843842
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.002442235192595274,
+          "hi": 0.08878113152800998,
+          "lo": 0.06306948381084386,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.07399992485308664
+        },
+        "free": {
+          "diff": 0.0032435165207948674,
+          "hi": 0.08419549358783249,
+          "lo": 0.051845934875799755,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.0683141731396965
+        },
+        "point": "p25",
+        "term": "audio_fit",
+        "tree": 0.07155768966049136,
+        "tree_bags": [
+          0.06190355367548435,
+          0.07887499119138958
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.009112095759767597,
+          "hi": 0.1649306932043653,
+          "lo": 0.14147501933584264,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.15428186817813738
+        },
+        "free": {
+          "diff": 0.0011153435746692753,
+          "hi": 0.17607737031750567,
+          "lo": 0.14738329026108798,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.1622786203632357
+        },
+        "point": "p50",
+        "term": "audio_fit",
+        "tree": 0.16339396393790498,
+        "tree_bags": [
+          0.1593902472470897,
+          0.16732085499451857
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.0190901539684962,
+          "hi": 0.21836661657644824,
+          "lo": 0.19585404350687405,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.2064815747179266
+        },
+        "free": {
+          "diff": 0.005096034419506651,
+          "hi": 0.24174933537882345,
+          "lo": 0.20370058428458854,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.22047569426691616
+        },
+        "point": "p75",
+        "term": "audio_fit",
+        "tree": 0.2255717286864228,
+        "tree_bags": [
+          0.22251543483704106,
+          0.22870022432172749
+        ]
+      },
+      {
+        "final": {
+          "diff": 0.00222317738640998,
+          "hi": 0.27806306396417996,
+          "lo": 0.24841801698791177,
+          "outside_band": false,
+          "separates": false,
+          "value": 0.2611311857417134
+        },
+        "free": {
+          "diff": -0.023292443791891326,
+          "hi": 0.3076001659914387,
+          "lo": 0.27191786814739444,
+          "outside_band": true,
+          "separates": false,
+          "value": 0.2866468069200147
+        },
+        "point": "p95",
+        "term": "audio_fit",
+        "tree": 0.2633543631281234,
+        "tree_bags": [
+          0.2521755830181563,
+          0.27008133686917135
+        ]
+      },
+      {
+        "final": {
+          "diff": -0.00956016340291127,
+          "hi": -0.271710723235732,
+          "lo": -0.2848693704661926,
+          "outside_band": true,
+          "separates": false,
+          "value": -0.27887490753830113
+        },
+        "free": {
+          "diff": -0.005712517285781427,
+          "hi": -0.2756425266069245,
+          "lo": -0.2887205730471306,
+          "outside_band": false,
+          "separates": false,
+          "value": -0.282722553655431
+        },
+        "point": "missing",
+        "term": "audio_fit",
+        "tree": -0.2884350709412124,
+        "tree_bags": [
+          -0.289666576754698,
+          -0.28774880495513105
+        ]
+      }
+    ],
+    "separating": []
+  },
+  "protocol": "the docstring of pipeline/tree_audit.py",
+  "reasons": {
+    "agreement": {
+      "final": 0.8204551920341394,
+      "free": 0.9619630156472262
+    },
+    "artist_differs": {
+      "final": 0.0008831032903774448,
+      "free": 0.0017989141100281285
+    },
+    "groups": [
+      "artist",
+      "tag_affinity",
+      "artist_tag_affinity",
+      "genre_affinity",
+      "audio_fit"
+    ],
+    "level_final": "robust",
+    "level_free": "robust",
+    "picks": 35150,
+    "top3_positive": {
+      "final": [
+        0.8642105263157894,
+        0.47086770981507825,
+        0.8009103840682789,
+        0.39718349928876245,
+        0.26953058321479373
+      ],
+      "free": [
+        0.8642389758179232,
+        0.3436415362731152,
+        0.8128022759601707,
+        0.4332574679943101,
+        0.33923186344238976
+      ],
+      "tree": [
+        0.865149359886202,
+        0.3547368421052632,
+        0.8062588904694168,
+        0.4254623044096728,
+        0.34253200568990044
+      ]
+    }
+  },
+  "scores": {
+    "bags": [
+      0.04525513249909621,
+      0.045118487321130975,
+      0.04534025272867209,
+      0.045259808395312226,
+      0.04523032024173626
+    ],
+    "final": 0.04544996405110903,
+    "final_minus_free": {
+      "hi": 0.0002968558910018694,
+      "lo": -0.0003061264073787946,
+      "mean": -4.635258188462598e-06,
+      "n": 20000,
+      "se": 0.00015382484146058588,
+      "t": -0.030133352613597706
+    },
+    "free": 0.045454599309297496,
+    "sesoi": 0.0009089992810221806,
+    "tree": 0.04523023807176866,
+    "tree_minus_final": {
+      "decision": "within",
+      "hi": 0.00017016854430175086,
+      "lo": -0.0006096205029824978,
+      "mean": -0.0002197259793403735,
+      "n": 20000,
+      "se": 0.00019892943274343948,
+      "t": -1.1045423309669586
+    },
+    "tree_minus_free": {
+      "decision": "within",
+      "hi": 9.191475908806824e-05,
+      "lo": -0.0005406372341457405,
+      "mean": -0.00022436123752883613,
+      "n": 20000,
+      "se": 0.00016136826957620094,
+      "t": -1.390367747749125
+    }
+  },
+  "seconds": {
+    "loading": 23.186643362045288,
+    "pass_this_run": 1725.869841337204,
+    "total_this_run": 7416.067646980286
+  },
+  "settings": {
+    "arm": "p_pop-B",
+    "bags": 5,
+    "blocks": 64,
+    "chunk": 1024,
+    "learning_rate": 0.015,
+    "max_rounds": 50000,
+    "min_hessian": 0.0001,
+    "min_samples_leaf": 4,
+    "neg_levels": 255,
+    "patience": 100,
+    "pos_levels": 767,
+    "seed": 2026100401,
+    "tolerance": 1e-05,
+    "validation": 0.15,
+    "workers": 16
+  },
+  "shapes": {
+    "artist_affinity": {
+      "tree": [
+        1.244999222468518,
+        0.10375043306096043,
+        -1.0090700579507321,
+        -1.8118472791213533,
+        -2.4075263886417257,
+        -0.05878882291814125,
+        -6.351928189740619e-05
+      ]
+    },
+    "artist_tag_affinity": {
+      "tree": [
+        0.08298222103259845,
+        0.4068312626836412,
+        0.3696378252628079,
+        0.3489491562204564,
+        0.3901570695928624,
+        -1.9098576606866784,
+        -0.3228487250169417
+      ]
+    },
+    "audio_fit": {
+      "tree": [
+        -0.1555735652695338,
+        0.07155768966049136,
+        0.16339396393790498,
+        0.2255717286864228,
+        0.2633543631281234,
+        null,
+        -0.2884350709412124
+      ]
+    },
+    "colisten_same_artist": {
+      "tree": [
+        2.8802340347927373,
+        5.693031619858548,
+        7.67153425598843,
+        9.568789466647615,
+        11.918444466325436,
+        -0.3818004261528536,
+        -0.7271062964381834
+      ]
+    },
+    "genre_affinity": {
+      "tree": [
+        0.16660294215547647,
+        0.22602823283606863,
+        0.22107778629500033,
+        0.2497477556562023,
+        0.35676862567941275,
+        -1.101425870482448,
+        0.297412440279169
+      ]
+    },
+    "tag_affinity": {
+      "tree": [
+        0.4281468622936814,
+        0.25115334823903435,
+        0.2125877319094719,
+        0.09696326742032235,
+        0.08701717107589557,
+        -0.5931343537132813,
+        -0.3588471941759868
+      ]
+    }
+  },
+  "version": "tree-audit-v1"
+}

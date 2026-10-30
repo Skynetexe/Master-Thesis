@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="425.19685pt" height="459.212598pt" viewBox="0 0 425.19685 459.212598" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 459.212598 
+L 425.19685 459.212598 
+L 425.19685 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 7.370079 2.834646 
+L 417.826772 2.834646 
+Q 422.362205 2.834646 422.362205 7.370079 
+L 422.362205 44.787402 
+Q 422.362205 49.322835 417.826772 49.322835 
+L 7.370079 49.322835 
+Q 2.834646 49.322835 2.834646 44.787402 
+L 2.834646 7.370079 
+Q 2.834646 2.834646 7.370079 2.834646 
+z
+" clip-path="url(#p648291ea26)" style="fill: #ffffff; stroke: #c4c4c4; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 212.598425 52.741572 
+Q 212.598425 56.40942 212.598425 59.18284 
+" clip-path="url(#p648291ea26)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 213.998425 56.38284 
+L 212.598425 59.18284 
+L 211.198425 56.38284 
+z
+" clip-path="url(#p648291ea26)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 7.370079 63.496063 
+L 417.826772 63.496063 
+Q 422.362205 63.496063 422.362205 68.031496 
+L 422.362205 105.448819 
+Q 422.362205 109.984252 417.826772 109.984252 
+L 7.370079 109.984252 
+Q 2.834646 109.984252 2.834646 105.448819 
+L 2.834646 68.031496 
+Q 2.834646 63.496063 7.370079 63.496063 
+z
+" clip-path="url(#p648291ea26)" style="fill: #f4f4f4; stroke: #c4c4c4; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 212.598425 113.40299 
+Q 212.598425 117.070837 212.598425 119.844257 
+" clip-path="url(#p648291ea26)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 213.998425 117.044257 
+L 212.598425 119.844257 
+L 211.198425 117.044257 
+z
+" clip-path="url(#p648291ea26)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 7.370079 124.15748 
+L 417.826772 124.15748 
+Q 422.362205 124.15748 422.362205 128.692913 
+L 422.362205 189.354331 
+Q 422.362205 193.889764 417.826772 193.889764 
+L 7.370079 193.889764 
+Q 2.834646 193.889764 2.834646 189.354331 
+L 2.834646 128.692913 
+Q 2.834646 124.15748 7.370079 124.15748 
+z
+" clip-path="url(#p648291ea26)" style="fill: #f4f4f4; stroke: #c4c4c4; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 212.598425 197.308501 
+Q 212.598425 200.976349 212.598425 203.749769 
+" clip-path="url(#p648291ea26)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 213.998425 200.949769 
+L 212.598425 203.749769 
+L 211.198425 200.949769 
+z
+" clip-path="url(#p648291ea26)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 7.370079 208.062992 
+L 417.826772 208.062992 
+Q 422.362205 208.062992 422.362205 212.598425 
+L 422.362205 261.637795 
+Q 422.362205 266.173228 417.826772 266.173228 
+L 7.370079 266.173228 
+Q 2.834646 266.173228 2.834646 261.637795 
+L 2.834646 212.598425 
+Q 2.834646 208.062992 7.370079 208.062992 
+z
+" clip-path="url(#p648291ea26)" style="fill: #f4f4f4; stroke: #c4c4c4; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 212.598425 269.591966 
+Q 212.598425 273.259813 212.598425 276.033234 
+" clip-path="url(#p648291ea26)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 213.998425 273.233234 
+L 212.598425 276.033234 
+L 211.198425 273.233234 
+z
+" clip-path="url(#p648291ea26)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 7.370079 280.346457 
+L 417.826772 280.346457 
+Q 422.362205 280.346457 422.362205 284.88189 
+L 422.362205 310.677165 
+Q 422.362205 315.212598 417.826772 315.212598 
+L 7.370079 315.212598 
+Q 2.834646 315.212598 2.834646 310.677165 
+L 2.834646 284.88189 
+Q 2.834646 280.346457 7.370079 280.346457 
+z
+" clip-path="url(#p648291ea26)" style="fill: #f4f4f4; stroke: #c4c4c4; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 212.598425 318.631336 
+Q 212.598425 322.299184 212.598425 325.072604 
+" clip-path="url(#p648291ea26)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 213.998425 322.272604 
+L 212.598425 325.072604 
+L 211.198425 322.272604 
+z
+" clip-path="url(#p648291ea26)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 7.370079 329.385827 
+L 417.826772 329.385827 
+Q 422.362205 329.385827 422.362205 333.92126 
+L 422.362205 371.338583 
+Q 422.362205 375.874016 417.826772 375.874016 
+L 7.370079 375.874016 
+Q 2.834646 375.874016 2.834646 371.338583 
+L 2.834646 333.92126 
+Q 2.834646 329.385827 7.370079 329.385827 
+z
+" clip-path="url(#p648291ea26)" style="fill: #f4f4f4; stroke: #c4c4c4; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 212.598425 379.292753 
+Q 212.598425 382.960601 212.598425 385.734021 
+" clip-path="url(#p648291ea26)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 213.998425 382.934021 
+L 212.598425 385.734021 
+L 211.198425 382.934021 
+z
+" clip-path="url(#p648291ea26)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 7.370079 390.047244 
+L 417.826772 390.047244 
+Q 422.362205 390.047244 422.362205 394.582677 
+L 422.362205 432 
+Q 422.362205 436.535433 417.826772 436.535433 
+L 7.370079 436.535433 
+Q 2.834646 436.535433 2.834646 432 
+L 2.834646 394.582677 
+Q 2.834646 390.047244 7.370079 390.047244 
+z
+" clip-path="url(#p648291ea26)" style="fill: #ffffff; stroke: #c4c4c4; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="15.109683" transform="rotate(-0 9.92126 15.109683)">Data and ETL scripts (outside the runner)</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="9.92126" y="25.570789" transform="rotate(-0 9.92126 25.570789)">MLHD+ listening histories, the MusicBrainz database and the Spotify catalogue, converted to Parquet and bridged</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="9.92126" y="37.192836" transform="rotate(-0 9.92126 37.192836)">into one item space.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="75.7711" transform="rotate(-0 9.92126 75.7711)">Preparation</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="86.180449" transform="rotate(-0 9.92126 86.180449)">P1</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="86.180449" transform="rotate(-0 42.519685 86.180449)">corpus audit</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="86.180449" transform="rotate(-0 144.094488 86.180449)">P2</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="176.692913" y="86.180449" transform="rotate(-0 176.692913 86.180449)">train, validation, test split</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="278.267717" y="86.180449" transform="rotate(-0 278.267717 86.180449)">P2.5</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="310.866142" y="86.180449" transform="rotate(-0 310.866142 86.180449)">training table, statistics</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="97.802496" transform="rotate(-0 9.92126 97.802496)">P3</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="97.802496" transform="rotate(-0 42.519685 97.802496)">sampling tables</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="136.432517" transform="rotate(-0 9.92126 136.432517)">Features and baselines</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="146.841866" transform="rotate(-0 9.92126 146.841866)">P4</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="146.841866" transform="rotate(-0 42.519685 146.841866)">item feature matrices</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="146.841866" transform="rotate(-0 144.094488 146.841866)">P5</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="176.692913" y="146.841866" transform="rotate(-0 176.692913 146.841866)">evaluation harness, popularity</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="278.267717" y="146.841866" transform="rotate(-0 278.267717 146.841866)">P6</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="310.866142" y="146.841866" transform="rotate(-0 310.866142 146.841866)">ALS baseline</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #8c8c8c" x="9.92126" y="158.463913" transform="rotate(-0 9.92126 158.463913)">P7</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #8c8c8c" x="42.519685" y="158.463913" transform="rotate(-0 42.519685 158.463913)">item-item relational graph</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #8c8c8c" x="144.094488" y="158.463913" transform="rotate(-0 144.094488 158.463913)">P8</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #8c8c8c" x="176.692913" y="158.463913" transform="rotate(-0 176.692913 158.463913)">extra fusion features</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #8c8c8c" x="278.267717" y="158.463913" transform="rotate(-0 278.267717 158.463913)">P9</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #8c8c8c" x="310.866142" y="158.463913" transform="rotate(-0 310.866142 158.463913)">item co-occurrence</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="170.085961" transform="rotate(-0 9.92126 170.085961)">P9b</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="170.085961" transform="rotate(-0 42.519685 170.085961)">exact co-listening neighbours</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #8c8c8c" x="144.094488" y="170.085961" transform="rotate(-0 144.094488 170.085961)">P10</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #8c8c8c" x="176.692913" y="170.085961" transform="rotate(-0 176.692913 170.085961)">user profile vectors</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="278.267717" y="170.085961" transform="rotate(-0 278.267717 170.085961)">ALS-D</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="310.866142" y="170.085961" transform="rotate(-0 310.866142 170.085961)">ALS phase D tuning</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="181.708008" transform="rotate(-0 9.92126 181.708008)">KNN</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="181.708008" transform="rotate(-0 42.519685 181.708008)">ItemKNN baseline</text>
+   </g>
+   <g id="text_34">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="220.332326" transform="rotate(-0 9.92126 220.332326)">Training pairs and model fits</text>
+   </g>
+   <g id="text_35">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="230.747378" transform="rotate(-0 9.92126 230.747378)">P11</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="230.747378" transform="rotate(-0 42.519685 230.747378)">training pairs</text>
+   </g>
+   <g id="text_37">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="230.747378" transform="rotate(-0 144.094488 230.747378)">P12</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="176.692913" y="230.747378" transform="rotate(-0 176.692913 230.747378)">concept features of the pairs</text>
+   </g>
+   <g id="text_39">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="278.267717" y="230.747378" transform="rotate(-0 278.267717 230.747378)">P13a</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="310.866142" y="230.747378" transform="rotate(-0 310.866142 230.747378)">audit and base GAM fit</text>
+   </g>
+   <g id="text_41">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="242.369425" transform="rotate(-0 9.92126 242.369425)">P13b</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="242.369425" transform="rotate(-0 42.519685 242.369425)">experiment arms</text>
+   </g>
+   <g id="text_43">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="242.369425" transform="rotate(-0 144.094488 242.369425)">P11b</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="176.692913" y="242.369425" transform="rotate(-0 176.692913 242.369425)">more negatives</text>
+   </g>
+   <g id="text_45">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="278.267717" y="242.369425" transform="rotate(-0 278.267717 242.369425)">P12b</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="310.866142" y="242.369425" transform="rotate(-0 310.866142 242.369425)">their concept features</text>
+   </g>
+   <g id="text_47">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="253.991472" transform="rotate(-0 9.92126 253.991472)">P13b2</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="253.991472" transform="rotate(-0 42.519685 253.991472)">loss form, negatives</text>
+   </g>
+   <g id="text_49">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="253.986767" transform="rotate(-0 144.094488 253.986767)">Diag</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="176.692913" y="253.991472" transform="rotate(-0 176.692913 253.991472)">GAM against ItemKNN slices</text>
+   </g>
+   <g id="text_51">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="278.267717" y="253.991472" transform="rotate(-0 278.267717 253.991472)">Refit</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="310.866142" y="253.991472" transform="rotate(-0 310.866142 253.991472)">GAM refit, 2 × 2 design</text>
+   </g>
+   <g id="text_53">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="292.621494" transform="rotate(-0 9.92126 292.621494)">Stability and the frozen model</text>
+   </g>
+   <g id="text_54">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="303.030842" transform="rotate(-0 9.92126 303.030842)">P13c</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="303.030842" transform="rotate(-0 42.519685 303.030842)">bootstrap stability</text>
+   </g>
+   <g id="text_56">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="303.030842" transform="rotate(-0 144.094488 303.030842)">P13d</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="176.692913" y="303.030842" transform="rotate(-0 176.692913 303.030842)">bounded content shapes</text>
+   </g>
+   <g id="text_58">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="278.267717" y="303.030842" transform="rotate(-0 278.267717 303.030842)">P13c</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="310.866142" y="303.030842" transform="rotate(-0 310.866142 303.030842)">stability of the final model</text>
+   </g>
+   <g id="text_60">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="341.660864" transform="rotate(-0 9.92126 341.660864)">Evaluation</text>
+   </g>
+   <g id="text_61">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="352.070213" transform="rotate(-0 9.92126 352.070213)">P14</text>
+   </g>
+   <g id="text_62">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="352.070213" transform="rotate(-0 42.519685 352.070213)">cold-track GAM</text>
+   </g>
+   <g id="text_63">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="352.070213" transform="rotate(-0 144.094488 352.070213)">P14</text>
+   </g>
+   <g id="text_64">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="176.692913" y="352.070213" transform="rotate(-0 176.692913 352.070213)">evaluation on the eval listeners</text>
+   </g>
+   <g id="text_65">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="278.267717" y="352.070213" transform="rotate(-0 278.267717 352.070213)">Curve</text>
+   </g>
+   <g id="text_66">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="310.866142" y="352.070213" transform="rotate(-0 310.866142 352.070213)">cold-start curve</text>
+   </g>
+   <g id="text_67">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="363.69226" transform="rotate(-0 9.92126 363.69226)">Beyond</text>
+   </g>
+   <g id="text_68">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="42.519685" y="363.69226" transform="rotate(-0 42.519685 363.69226)">novelty, coverage, diversity</text>
+   </g>
+   <g id="text_69">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="363.69226" transform="rotate(-0 144.094488 363.69226)">Removal</text>
+   </g>
+   <g id="text_70">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="176.692913" y="363.69226" transform="rotate(-0 176.692913 363.69226)">evidence removal of the reasons</text>
+   </g>
+   <g id="text_71">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="402.316578" transform="rotate(-0 9.92126 402.316578)">Plain scripts and the figures notebook, on the stored outputs</text>
+   </g>
+   <g id="text_72">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="412.73163" transform="rotate(-0 9.92126 412.73163)">lb_demo.py</text>
+   </g>
+   <g id="text_73">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="58.110236" y="412.73163" transform="rotate(-0 58.110236 412.73163)">ListenBrainz demo</text>
+   </g>
+   <g id="text_74">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="412.73163" transform="rotate(-0 144.094488 412.73163)">lb_outside.py</text>
+   </g>
+   <g id="text_75">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="192.283465" y="412.73163" transform="rotate(-0 192.283465 412.73163)">tracks outside MLHD</text>
+   </g>
+   <g id="text_76">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="278.267717" y="412.73163" transform="rotate(-0 278.267717 412.73163)">tree_audit.py</text>
+   </g>
+   <g id="text_77">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="326.456693" y="412.73163" transform="rotate(-0 326.456693 412.73163)">tree-GAM audit</text>
+   </g>
+   <g id="text_78">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="9.92126" y="424.348972" transform="rotate(-0 9.92126 424.348972)">figures.py</text>
+   </g>
+   <g id="text_79">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="58.110236" y="424.353677" transform="rotate(-0 58.110236 424.353677)">thesis tables</text>
+   </g>
+   <g id="text_80">
+    <text style="font-weight: 700; font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #222222" x="144.094488" y="424.353677" transform="rotate(-0 144.094488 424.353677)">notebook</text>
+   </g>
+   <g id="text_81">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: start; fill: #555555" x="192.283465" y="424.353677" transform="rotate(-0 192.283465 424.353677)">thesis figures</text>
+   </g>
+   <g id="text_82">
+    <text style="font-size: 6.3px; font-family: 'Liberation Sans'; text-anchor: start; fill: #8c8c8c" x="4.251969" y="450.92171" transform="rotate(-0 4.251969 450.92171)">Grey: no evaluation stage depends on these stages (not used by the final model). Arrows: the order of the phases.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p648291ea26">
+   <rect x="0" y="0" width="425.19685" height="459.212598"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,27 @@
+# The downloads, the prepared tables and the model outputs stay in the
+# data folder (THESIS_DATA_ROOT). Three folders hold small copies of
+# outputs: demo/ the data of the demo page, figures/ the figures of the
+# thesis, and model/ the fitted GAMs.
+data/
+Data/
+duckdb_tmp/
+tmp/
+.tmp/
+*.parquet
+*.npz
+*.npy
+*.duckdb
+*.duckdb.wal
+*.zip
+*.zst
+*.gz
+*.tar
+
+# Python, Jupyter and virtual environments
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.venv-gpu/
+venv/
+env/

@@ -1,0 +1,7 @@
+{
+  "alpha": 1.0,
+  "factors": 64,
+  "iterations": 2,
+  "regularization": 100.0,
+  "seed": 20260907
+}

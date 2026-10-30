@@ -1,0 +1,48 @@
+{
+  "files": {
+    "arrays": "p13c_bounded_p_pop-B_lambda_arrays.npz",
+    "report": "reports/p13c_bounded_p_pop-B_lambda_report.md",
+    "results": "p13c_bounded_p_pop-B_lambda_model.json"
+  },
+  "inputs": {
+    "fusion_features.npz": "c330afedf21123d414d85f6b083ef165ada840732e56b1642e6bf68fbddc1836",
+    "fusion_pairs.npz": "788aa71d87dcf09fa6b31af4e8b960c1e6cf52c63cdf324a224f46b311914e0f",
+    "gam_knn_slices.npz": "9c956ed5a9ef62a962400507f9da9daf54b04daca8dcec1ecaf57674d8afe675",
+    "gam_refit.json": "f9560b5265895019bd350649aef1bd8a76a3cd223ee492a071caa7d6d8fdf4aa",
+    "gam_refit.npz": "a4afe08ca8d904d59d51edcf7c701dd7d2f9dea3a4c2a96e06c79ccf0b1cda39",
+    "itemknn_selection.json": "081d4db08a63a66b1f61642fce2ab843fbfb125a882712cfd29b059ec23310ce",
+    "itemknn_selection_ranks.npz": "983e365caf96c12d6e6c3d4586124361e1bed9ffbb7b30292ecc6acbee19a42e",
+    "marker:p11b_more_pairs": "99bf1a734a87edd1c9ae81523a6700fe48914edfb692e8523eafdba29f83cee8",
+    "marker:p12b_more_features": "dceeb1e2f4b7c3b925146a36af19da9ac0d6982e6dcf264caef89eaf8af194e7",
+    "marker:p13b2_loss": "409a0df4cf43fbeb86c83acf97f1197ee35c22dcce41ee24e747d7ec22298928",
+    "marker:p6_als": "4760c5b70b2b3907f0cee52081204c667d744fe6c470ed133ce2595e6aba725d",
+    "marker:p9b_colisten": "fd936ef1dc23c7e9a4a245202c0876f0060ddf1003e2015ad005a3128ebc0e34",
+    "p13a_arrays.npz": "d38ac927299b2d4860a7943b3e1f2599c06d3bc09c0ec844b8c3ba9ff12f04f8",
+    "p13a_model.json": "117e7be80ee4e7aeea944fd601e5a38eded5a704777d678f4cf43a07a9094839",
+    "p13b2_arrays.npz": "b83b9a5cc719786a3d26eedf0833d37d11089645bdc82a82d4ca2a9021420cda",
+    "p13b2_model.json": "b6d1c7fc121d5c5e995036ca796b527fd754c105154d21d5171adf1cda312152",
+    "p13b_model.json": "ec7c197f5525517c944391c5b4f4e857433e96ec564cf651e4d0e17b1f193392",
+    "p13c_arrays.npz": "c08aa50e5abbf55a5176c7eb2719e3d0c4e4eac50ea2fe97294bbb4b163dc0c4",
+    "p13c_model.json": "8fed6a1d429546f58c7e378cdf079ea15451f13a30ff2c1890d982114402b67f",
+    "p13d.json": "427ade7ee8289e31f800a9b62bbe8c2e04af8d5f64632e072ff0d9003c350bd5",
+    "p13d_model_set.npz": "3be40b4d8d1b6a5893e786b24eeae1c8ea2176bbbfd171ab1cedac69111da46d"
+  },
+  "model": {
+    "bounded": [
+      "tag_affinity",
+      "artist_tag_affinity",
+      "genre_affinity",
+      "audio_fit"
+    ],
+    "changed": true,
+    "fingerprint": "eaa3ee60b6d3f70ebd7bfa40db561d806bf54b9bc6decc1ea5f99d16edfdb43a",
+    "fit_name": "bounded|p_pop-B|lambda",
+    "tag": "bounded_p_pop-B_lambda"
+  },
+  "sha256": {
+    "arrays": "ad69247c0da46cd3aac2019782c6092a753a4eaa80d91de9ba7b36af1f3196e2",
+    "results": "8eddcfe03fc54e0c1b387ba9ac4a657d09475a0bcbbac601c09958f4ab87331c"
+  },
+  "source": "P13c on p13d.json's model (the model switch)",
+  "version": "p13c-final-v1"
+}

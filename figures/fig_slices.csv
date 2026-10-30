@@ -1,0 +1,31 @@
+slice,level,arm,ndcg100
+popularity band,01-10,gam,0.0
+popularity band,11-50,gam,0.004107662545783848
+popularity band,51-90,gam,0.009183348914463126
+popularity band,91-100,gam,0.04770176495844327
+popularity band,01-10,artist_only,0.0
+popularity band,11-50,artist_only,0.010965740431945219
+popularity band,51-90,artist_only,0.017886480496019368
+popularity band,91-100,artist_only,0.05022718874989516
+popularity band,01-10,knn_same,0.0
+popularity band,11-50,knn_same,0.008383253737826276
+popularity band,51-90,knn_same,0.01548376509003602
+popularity band,91-100,knn_same,0.04656449493457313
+popularity band,01-10,als_d,0.0
+popularity band,11-50,als_d,0.0
+popularity band,51-90,als_d,0.0
+popularity band,91-100,als_d,0.03148897836993325
+popularity band,01-10,popularity,0.0
+popularity band,11-50,popularity,0.0
+popularity band,51-90,popularity,0.0
+popularity band,91-100,popularity,0.003454961014212589
+same-artist neighbour,with a same-artist neighbour,gam,0.05092033921644595
+same-artist neighbour,without a same-artist neighbour,gam,0.0
+same-artist neighbour,with a same-artist neighbour,artist_only,0.05519170307909583
+same-artist neighbour,without a same-artist neighbour,artist_only,0.0
+same-artist neighbour,with a same-artist neighbour,knn_same,0.050944239916187704
+same-artist neighbour,without a same-artist neighbour,knn_same,0.0
+same-artist neighbour,with a same-artist neighbour,als_d,0.03204965934200809
+same-artist neighbour,without a same-artist neighbour,als_d,0.0019010086174063756
+same-artist neighbour,with a same-artist neighbour,popularity,0.0030266647085838995
+same-artist neighbour,without a same-artist neighbour,popularity,0.0023677070197002247

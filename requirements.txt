@@ -1,0 +1,30 @@
+# The packages that the code imports, at the versions of the environment
+# that ran the thesis code (Python 3.14). They need Python 3.12 or later.
+# Install: python3 -m pip install -r requirements.txt
+
+# The pipeline, the tests and the data preparation scripts
+duckdb==1.5.5
+numpy==2.5.2
+scipy==1.18.1
+pandas==3.0.5
+pyarrow==25.0.1
+threadpoolctl==3.6.0
+psutil==7.2.2
+zstandard==0.25.0
+
+# The figures (pipeline/figures.py and Thesis Figures.ipynb)
+matplotlib==3.11.1
+
+# The notebooks: Jupyter, and the downloads of FullDataDownload.ipynb
+jupyterlab==4.6.3
+ipywidgets==8.1.9
+requests==2.34.2
+urllib3==2.7.0
+beautifulsoup4==4.15.0
+tqdm==4.70.0
+kaggle==2.2.4
+huggingface_hub==1.29.0
+
+# Optional: the browser checks of test_demo_page.py, which print SKIP
+# without it. Install with: python3 -m pip install playwright
+# and then: python3 -m playwright install chromium

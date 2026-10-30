@@ -1,0 +1,150 @@
+# Tag filter for the genre feature vocabulary.
+# One tag per line. A line that starts with '#' is a comment.
+# Policy: origin tags describe the artist, not the music. Occupation tags
+# describe the job, not the sound. Event and auto tags carry no genre
+# signal. The full vocabulary stays available to the explanation layer.
+special purpose artist
+american
+british
+english
+uk
+usa
+european
+german
+french
+japanese
+composer
+conductor
+film composer
+pianist
+2008 universal fire victim
+likedis auto
+aln-sh
+has german audiobooks
+african
+argentina
+argentine
+asian
+australia
+australian
+austria
+austrian
+belgian
+belgium
+brazil
+brazilian
+canada
+canadian
+china
+chinese
+danish
+denmark
+deutsch
+dutch
+finland
+finnish
+france
+germany
+greece
+greek
+indian
+ireland
+irish
+italian
+italiano
+italy
+japan
+korean
+mexican
+mexico
+netherlands
+nordic
+norway
+norwegian
+poland
+polish
+portuguese
+russia
+russian
+scandinavian
+scotland
+scottish
+spain
+spanish
+sweden
+swedish
+swiss
+switzerland
+turkey
+turkish
+wales
+welsh
+seen live
+nursery rhymes collection
+stop merging crap so my tags get fucked up
+todo-works
+check it
+tribute albums
+pledging my time
+bob dylan - where are you now my blue eyed son
+favorite
+my way
+want to listen
+not easy listening
+_not_ god-damn easy listening
+many albums
+my blue heaven
+wedding collections
+check recordings
+favourite
+http://www.allmusic.com/album/flesh-of-my-flesh-blood-of-my-blood-mw0000046117
+todo
+collection
+my sweet lord
+my favolite
+favorite argentinian
+goodbye my love
+my rap world
++collection
+todo-live
+where you want to be
+seen live - iiih
+check recordings again
+_listen
+ngs-todo
+queasy listening
+drum and bass albums
+underrated in my opinion. i seen them in concert 6 times never a dissappointment
+todo catcat
+uneasy listening
+_download live albums
+my morning jacket
+want
+todo-vinyl-singles
+_check after merge
+check-it-out
+merge me
+mergeme
+_fix me_
+fix me
+fixme
+fixme label mess
+fixme label mess few
+fixme label disaster
+fixme guesswork labels
+ivan-fixit-compilations-mess
+label as artist
+label
+label owner
+group self-releases label
+misc
+various artists
+various
+archives
+box set
+compilation
+anthology
+vinyl
+dylan bootleg series
+records
+девочка не спит (dj megantrop bootleg)
